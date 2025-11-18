@@ -1,0 +1,16 @@
+# Simulation outputs
+*.wlf
+*.qdb
+*.qpg
+*.qtl
+*.mpf
+*.mt?
+
+# Temp files
+*.txt
+*.log
+.nfs*
+work/
+transcript
+*_opt__lock
+_vmake
