@@ -10,6 +10,7 @@ module __NOAA_Module__( CLK, RESET, MODE, TN, SAMPLE, DONE, AVG_SD );
     // constants / labels
     localparam TEMP_WIDTH       = 12;
     localparam N_SAMPLES        = 14;
+    localparam MAX_IDX          = 4'b1101;
     localparam SUM_SQRD_WIDTH   = 28;
 
     localparam INIT_STDEV = 12'b010000000000;
@@ -45,7 +46,7 @@ module __NOAA_Module__( CLK, RESET, MODE, TN, SAMPLE, DONE, AVG_SD );
                     .out( num_smpls ) );
 
     // counter ( which slot to put sample in )
-    counter     #(  .DATA_WIDTH( 4 ), .MAX_VAL( N_SAMPLES - 1 ) )
+    counter     #(  .DATA_WIDTH( 4 ), .MAX_VAL( MAX_IDX ) )
         idx_cntr (  .clk( CLK        ),
                     .rst( RESET      ),
                     .out( idx_reg    ) );
