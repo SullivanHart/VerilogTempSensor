@@ -7,7 +7,6 @@
 *.mt?
 
 # Temp files
-*.txt
 *.log
 .nfs*
 work/

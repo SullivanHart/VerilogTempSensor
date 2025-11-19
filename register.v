@@ -15,7 +15,7 @@ module register #( parameter DATA_WIDTH = 12,
             always @(posedge clk or posedge rst ) begin
                 if ( rst )
                     out_smpls[ i * DATA_WIDTH +: DATA_WIDTH ] 
-                        <= 12'b010000000000; // reset to 32 F
+                        <= {DATA_WIDTH{1'b0}}; // reset to 0
                 else if ( enables[ i ] )
                     out_smpls[ i * DATA_WIDTH +: DATA_WIDTH ] 
                         <= in_smpl;
