@@ -1,3 +1,4 @@
+//this is the d flip flop module
 module dff  #( parameter DATA_WIDTH = 12,
                parameter RESET_VAL  = {DATA_WIDTH{1'b0}} )
              ( clk, rst, en, d, q );
